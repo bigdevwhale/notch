@@ -109,17 +109,25 @@ object Pickup {
     /**
      * Takes in pictures picked from the gallery, dated when they were taken, so the weeks before the app
      * fill in too. Returns how many came in.
+     *
+     * With [into] (a week, from its first millisecond to the next week's), they go into that week: a picture
+     * whose own date falls elsewhere, or is lost, is set at midday of the week's first day, in the order picked.
      */
-    suspend fun import(context: Context, db: NotchDatabase, vault: Vault, uris: List<Uri>, kids: String): Int {
+    suspend fun import(context: Context, db: NotchDatabase, vault: Vault, uris: List<Uri>, kids: String, into: LongRange? = null): Int {
         val dao = db.dao()
         val known = dao.sources().toSet()
         var n = 0
-        uris.forEach { uri ->
-            if (uri.toString() in known) return@forEach
+        uris.forEachIndexed { i, uri ->
+            if (uri.toString() in known) return@forEachIndexed
             val video = context.contentResolver.getType(uri)?.startsWith("video") == true
-            val name = copy(context, vault, uri, video) ?: return@forEach
+            val name = copy(context, vault, uri, video) ?: return@forEachIndexed
             val f = vault.file(name)
-            val taken = takenAt(context, uri, f, video) ?: f.lastModified()
+            val own = takenAt(context, uri, f, video)
+            val taken = when {
+                into == null -> own ?: f.lastModified()
+                own != null && own in into -> own
+                else -> into.first + 12 * 3_600_000L + i * 60_000L
+            }
             dao.insert(
                 Moment(
                     kids = kids, file = name, kind = (if (video) Kind.VIDEO else Kind.PHOTO).name, takenAt = taken, source = uri.toString(),

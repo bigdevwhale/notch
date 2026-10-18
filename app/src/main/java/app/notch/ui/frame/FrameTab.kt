@@ -1,5 +1,8 @@
 package app.notch.ui.frame
 
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.PickVisualMediaRequest
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -24,13 +27,18 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.AddPhotoAlternate
 import androidx.compose.material.icons.rounded.Straighten
+import androidx.compose.material.icons.rounded.UnfoldMore
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -47,6 +55,7 @@ import app.notch.container
 import app.notch.data.Child
 import app.notch.data.Mark
 import app.notch.data.Moment
+import app.notch.data.Pickup
 import app.notch.domain.Growth
 import app.notch.ui.Go
 import app.notch.ui.House
@@ -62,6 +71,9 @@ import app.notch.ui.shoot.ShootRequest
 import app.notch.ui.theme.U
 import app.notch.ui.theme.UType
 import app.notch.ui.theme.crayon
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /** A row on the door frame: one week of life, or a run of empty weeks folded into one. */
 private sealed class Row_ {
@@ -82,7 +94,9 @@ fun FrameTab(house: House, child: Child, go: Go, onPick: (Long) -> Unit) {
     val current = house.week(child)
     val first = remember(child, moments) { Growth.firstCounted(child, moments, house.zone) }
     val notched = remember(child, moments) { Growth.notched(child, moments, house.zone) }
-    val rows = remember(child, moments, marks, current) {
+    // Folded weeks the parent opened, to fill them from the gallery.
+    var open by remember(child.id) { mutableStateOf(emptySet<Int>()) }
+    val rows = remember(child, moments, marks, current, open) {
         val byWeek = moments.groupBy { house.weekOf(child, it) }
         val marksByWeek = marks.groupBy { Growth.week(child.birthday, Growth.date(it.at, house.zone)) }
         buildList {
@@ -91,12 +105,12 @@ fun FrameTab(house: House, child: Child, go: Go, onPick: (Long) -> Unit) {
                 if ((w + 1) % 52 == 0 && w != current) add(Row_.Year((w + 1) / 52))
                 val l = byWeek[w].orEmpty()
                 val mk = marksByWeek[w].orEmpty()
-                if (l.isNotEmpty() || mk.isNotEmpty() || w == current) {
+                if (l.isNotEmpty() || mk.isNotEmpty() || w == current || w in open) {
                     add(Row_.Week(w, l, mk)); w--; continue
                 }
                 // Fold empty weeks, but never across a birthday line.
                 var a = w
-                while (a - 1 >= 0 && byWeek[a - 1] == null && marksByWeek[a - 1] == null && (a) % 52 != 0) a--
+                while (a - 1 >= 0 && byWeek[a - 1] == null && marksByWeek[a - 1] == null && a - 1 !in open && (a) % 52 != 0) a--
                 add(Row_.Gap(a, w, before = w < first))
                 w = a - 1
             }
@@ -104,6 +118,25 @@ fun FrameTab(house: House, child: Child, go: Go, onPick: (Long) -> Unit) {
     }
     var measure by remember { mutableStateOf(false) }
     val color = crayon(child.crayon)
+
+    // Pictures from the gallery into one chosen week, whenever they were taken.
+    var into by rememberSaveable { mutableIntStateOf(-1) }
+    val pick = rememberLauncherForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(200)) { uris ->
+        val week = into
+        if (uris.isEmpty() || week < 0) return@rememberLauncherForActivityResult
+        val container = c.container
+        val from = Growth.weekStart(child.birthday, week).atStartOfDay(house.zone).toInstant().toEpochMilli()
+        val to = Growth.weekStart(child.birthday, week + 1).atStartOfDay(house.zone).toInstant().toEpochMilli()
+        container.scope.launch {
+            val n = withContext(Dispatchers.IO) { Pickup.import(c, container.db, container.vault, uris, Moment.kidsOf(listOf(child.id)), from until to) }
+            container.changed()
+            withContext(Dispatchers.Main) {
+                val text = if (n == 0) c.getString(R.string.import_none) else c.getString(R.string.import_week_done, T.plural(c, R.plurals.pictures, n), week + 1)
+                android.widget.Toast.makeText(c, text, android.widget.Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    val fill: (Int) -> Unit = { w -> into = w; pick.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageAndVideo)) }
 
     LazyColumn(Modifier.fillMaxSize().background(U.c.bg), contentPadding = PaddingValues(bottom = 24.dp)) {
         item { ChildBar(house, child, go, onPick) }
@@ -118,8 +151,8 @@ fun FrameTab(house: House, child: Child, go: Go, onPick: (Long) -> Unit) {
             }
         }) { r ->
             when (r) {
-                is Row_.Week -> WeekRow(child, r, r.week == current, color, go)
-                is Row_.Gap -> GapRow(child, r)
+                is Row_.Week -> WeekRow(child, r, r.week == current, color, go) { fill(r.week) }
+                is Row_.Gap -> GapRow(child, r) { open = open + (r.from..r.to) }
                 is Row_.Year -> YearRow(child, r.years)
             }
         }
@@ -181,7 +214,7 @@ private fun Header(house: House, child: Child, notched: Set<Int>, current: Int, 
 }
 
 @Composable
-private fun WeekRow(child: Child, r: Row_.Week, now: Boolean, color: androidx.compose.ui.graphics.Color, go: Go) {
+private fun WeekRow(child: Child, r: Row_.Week, now: Boolean, color: androidx.compose.ui.graphics.Color, go: Go, onFill: () -> Unit) {
     val c = ctx()
     val p = U.c
     val start = Growth.weekStart(child.birthday, r.week)
@@ -214,17 +247,25 @@ private fun WeekRow(child: Child, r: Row_.Week, now: Boolean, color: androidx.co
                 }
             } else if (now) {
                 Text(stringResource(R.string.frame_this_week_empty), style = UType.Muted)
+            } else {
+                Text(stringResource(R.string.frame_past_empty), style = UType.Muted)
             }
+        }
+        IconButton(onClick = onFill, modifier = Modifier.padding(end = 4.dp)) {
+            Icon(Icons.Rounded.AddPhotoAlternate, stringResource(R.string.frame_from_gallery), tint = if (has || now) p.faint else p.woodDark)
         }
     }
 }
 
 @Composable
-private fun GapRow(child: Child, r: Row_.Gap) {
+private fun GapRow(child: Child, r: Row_.Gap, onOpen: () -> Unit) {
     val c = ctx()
     val p = U.c
     val n = r.to - r.from + 1
-    Row(Modifier.fillMaxWidth().height((22 + minOf(n, 6) * 4).dp).padding(start = 20.dp), verticalAlignment = Alignment.CenterVertically) {
+    Row(
+        Modifier.fillMaxWidth().height((22 + minOf(n, 6) * 4).dp).clickable(onClickLabel = stringResource(R.string.frame_open), onClick = onOpen).padding(start = 20.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
         Canvas(Modifier.width(JAMB).fillMaxHeight()) {
             jamb(p, r.from * 17 + child.id.toInt(), size.width)
             // Faint pencil dots for the weeks that went by.
@@ -235,7 +276,9 @@ private fun GapRow(child: Child, r: Row_.Gap) {
         Text(
             if (r.before) stringResource(R.string.frame_before, T.plural(c, R.plurals.weeks, n)) else stringResource(R.string.frame_gap, T.plural(c, R.plurals.weeks, n)),
             style = UType.Small,
+            modifier = Modifier.weight(1f),
         )
+        Icon(Icons.Rounded.UnfoldMore, stringResource(R.string.frame_open), tint = p.faint, modifier = Modifier.padding(end = 16.dp).size(18.dp))
     }
 }
 

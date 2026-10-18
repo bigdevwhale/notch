@@ -142,6 +142,10 @@
     <string name="frame_this_week_empty">Пока пусто. Фото или видео — и зарубка готова.</string>
     <string name="frame_gap">%1$s без зарубок</string>
     <string name="frame_before">%1$s до косяка</string>
+    <string name="frame_open">Нажмите, чтобы раскрыть недели и добавить снимки из галереи</string>
+    <string name="frame_past_empty">Без зарубки. Сюда ещё можно добавить снимки из галереи.</string>
+    <string name="frame_from_gallery">Из галереи — в эту неделю</string>
+    <string name="import_week_done">%1$s на косяке, %2$d-я неделя</string>
     <string name="frame_year">%1$s · %2$s</string>
     <string name="frame_born">День рождения — %1$s</string>
     <string name="height_title">Рост: %1$s</string>

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.0]
+
+- Past weeks take pictures from the gallery: every week on the door frame has a gallery button, and folded runs of empty weeks open with a tap. What is picked goes into that week even when its own date is lost or elsewhere.
+
 ## [1.0.0]
 
 - First release: a door frame for each child with a notch for every week of life that has a photo or a clip, shot with the phone's own camera or taken in from the gallery into the week it was taken.

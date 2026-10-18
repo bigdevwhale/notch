@@ -120,6 +120,10 @@
     <string name="frame_this_week_empty">Nothing yet. A photo or a clip makes the notch.</string>
     <string name="frame_gap">%1$s without a notch</string>
     <string name="frame_before">%1$s before the door frame</string>
+    <string name="frame_open">Tap to open the weeks and fill them from the gallery</string>
+    <string name="frame_past_empty">No notch. Pictures from the gallery can still go here.</string>
+    <string name="frame_from_gallery">From the gallery, into this week</string>
+    <string name="import_week_done">%1$s on the door frame, week %2$d</string>
     <string name="frame_year">%1$s · %2$s</string>
     <string name="frame_born">Born %1$s</string>
     <string name="height_title">How tall is %1$s?</string>
