@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notch</string>
+
+    <!-- Common -->
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="next">Next</string>
+    <string name="delete">Delete</string>
+    <string name="close">Close</string>
+    <string name="share">Share</string>
+    <string name="play">Play</string>
+    <string name="favorite">Favourite</string>
+    <string name="settings">Settings</string>
+    <string name="add_child">Add a child</string>
+    <string name="and_sep">" and "</string>
+    <string name="no_camera">No camera app answered on this phone.</string>
+    <string name="save_gallery">Save to gallery</string>
+    <string name="saved_gallery">Saved to the gallery, in Notch</string>
+    <string name="save_failed">Couldn\'t save it to the gallery</string>
+    <string name="cm">%1$s cm</string>
+    <string name="cm_unit">cm</string>
+
+    <!-- Ages -->
+    <string name="age_born">the first day</string>
+    <string name="age_short_d">%1$d d</string>
+    <string name="age_short_m">%1$d m</string>
+    <string name="age_short_y">%1$d y</string>
+    <string name="age_short_ym">%1$d y %2$d m</string>
+    <plurals name="years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="months_left">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="photos">
+        <item quantity="one">%d photo</item>
+        <item quantity="other">%d photos</item>
+    </plurals>
+    <plurals name="clips">
+        <item quantity="one">%d clip</item>
+        <item quantity="other">%d clips</item>
+    </plurals>
+    <plurals name="pictures">
+        <item quantity="one">%d picture</item>
+        <item quantity="other">%d pictures</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="hands">
+        <item quantity="one">%d hand</item>
+        <item quantity="other">%d hands</item>
+    </plurals>
+    <plurals name="interviews">
+        <item quantity="one">%d year of answers</item>
+        <item quantity="other">%d years of answers</item>
+    </plurals>
+
+    <!-- Tabs -->
+    <string name="tab_frame">Door frame</string>
+    <string name="tab_rings">Rings</string>
+    <string name="tab_words">Words</string>
+    <string name="tab_fading">Fading</string>
+    <string name="shoot">Take a picture</string>
+
+    <!-- Welcome -->
+    <string name="welcome_1_title">They grow up faster than the photos do</string>
+    <string name="welcome_1_text">A week goes by, then a month, and somehow there\'s no picture of how they were just then. Notch keeps a door frame for each child, the kind you mark their height on, with one notch for every week of their life that has a photo or a clip.</string>
+    <string name="welcome_2_title">One picture a week is enough</string>
+    <string name="welcome_2_text">Your phone\'s own camera does the shooting; Notch takes in what it took. A gentle nudge comes when a week is going by empty, at the hour you usually take pictures. Then come the words they mix up, the things that will soon be gone, a second a day and the same spot every year. Everything stays on this phone.</string>
+    <string name="welcome_3_title">Who is it for?</string>
+    <string name="welcome_3_text">You can add brothers and sisters later.</string>
+    <string name="welcome_mark">%1$d</string>
+    <string name="welcome_start">Hang the door frame</string>
+
+    <!-- Child -->
+    <string name="child_new">A new child</string>
+    <string name="child_name">Name</string>
+    <string name="child_name_hint">Masha</string>
+    <string name="child_born">Birthday</string>
+    <string name="child_born_pick">Choose the day</string>
+    <string name="child_gender_q">A girl or a boy?</string>
+    <string name="child_girl">Girl</string>
+    <string name="child_boy">Boy</string>
+    <string name="child_none">Rather not say</string>
+    <string name="child_gender_why">Only for the grammar of a few reminders.</string>
+    <string name="child_crayon">Their crayon</string>
+    <string name="child_delete_title">Take %1$s off the door frame?</string>
+    <string name="child_delete_text">Their pictures, words and heights are deleted from Notch. Pictures with brothers or sisters stay with them. The originals in your gallery are not touched.</string>
+
+    <!-- Door frame -->
+    <string name="frame_week">Week %1$d of life</string>
+    <string name="frame_done">This week has its notch</string>
+    <string name="frame_done_sub">One more picture never hurts.</string>
+    <string name="frame_streak">%1$s in a row.</string>
+    <string name="frame_todo">No picture of %1$s yet this week</string>
+    <string name="frame_todo_f">No picture of %1$s yet this week</string>
+    <string name="frame_todo_m">No picture of %1$s yet this week</string>
+    <string name="frame_left">%1$s left in this week.</string>
+    <string name="frame_last_day">Today is the last day of this week.</string>
+    <string name="frame_shoot">Make a notch</string>
+    <string name="frame_height">Height</string>
+    <string name="frame_this_week_empty">Nothing yet. A photo or a clip makes the notch.</string>
+    <string name="frame_gap">%1$s without a notch</string>
+    <string name="frame_before">%1$s before the door frame</string>
+    <string name="frame_year">%1$s · %2$s</string>
+    <string name="frame_born">Born %1$s</string>
+    <string name="height_title">How tall is %1$s?</string>
+    <string name="height_mark">Mark it</string>
+
+    <!-- Shooting -->
+    <string name="shoot_title">Who\'s in the picture?</string>
+    <string name="shoot_second_title">A second of today</string>
+    <string name="shoot_who">Tap to add brothers and sisters.</string>
+    <string name="shoot_for">For: %1$s</string>
+    <string name="shoot_open">Open the camera</string>
+    <string name="shoot_hint">Your phone\'s camera opens with all its modes. Whatever you take goes on the door frame when you come back; the originals stay in the gallery.</string>
+    <string name="shoot_second_open">Film a second</string>
+    <string name="shoot_second_hint">Film a short clip; a second from its middle goes into the year\'s film.</string>
+    <string name="shoot_second">A second</string>
+    <string name="shoot_photos">Photos</string>
+    <string name="shoot_gallery">From the gallery</string>
+    <string name="import_done">%1$s on the door frame, each in its own week</string>
+    <string name="import_none">Those are already on the door frame.</string>
+    <string name="carved_title">Notched!</string>
+    <string name="carved_for">%1$s for %2$s</string>
+    <string name="ghost_title">The same spot</string>
+    <string name="ghost_sub">An earlier picture, faint over the camera, to stand them where they stood.</string>
+    <string name="ghost_year_ago">A year ago</string>
+    <string name="ghost_on_camera">It will lie over the camera. Line them up and shoot.</string>
+    <string name="ghost_no_overlay">To lay it over the camera itself, Notch needs to be allowed to show over other apps. Without it, have a good look first.</string>
+    <string name="ghost_allow">Allow over other apps</string>
+
+    <!-- Moment -->
+    <string name="moment_note_hint">What was happening?</string>
+    <string name="moment_who">Who\'s in it</string>
+    <string name="moment_second">A second of the day</string>
+    <string name="moment_hand">A hand, %1$s</string>
+    <string name="moment_series_start">Repeat this spot</string>
+    <string name="moment_series_open">The same spot</string>
+    <string name="moment_series_sub">Shoot it again some day with this picture as a ghost over the camera.</string>
+    <string name="moment_face">Their face</string>
+    <string name="moment_delete_title">Delete this picture?</string>
+    <string name="moment_delete_text">It comes off the door frame. The original in your gallery is not touched.</string>
+
+    <!-- Rings -->
+    <string name="rings_year">Year %1$d: %2$d of %3$d weeks notched</string>
+    <string name="stat_moments">pictures</string>
+    <string name="stat_weeks">weeks notched</string>
+    <string name="stat_best">longest run</string>
+    <string name="rings_height">Height</string>
+    <string name="rings_on_this_day">On this day</string>
+    <string name="rings_same_age">%1$s at %2$s</string>
+    <string name="rings_made">Made from it</string>
+
+    <!-- Films -->
+    <string name="films_title">A second a day</string>
+    <string name="films_count">%1$s</string>
+    <string name="films_sub">A short clip a day; the film takes a second from each, with the date and age in the corner. A year comes to six minutes.</string>
+    <string name="films_remind">Remind me every day</string>
+    <string name="films_remind_sub">At %1$s, if there\'s no second yet</string>
+    <string name="films_today">Film today\'s second</string>
+    <string name="films_today_done">Film another second</string>
+    <string name="films_none">No seconds yet.</string>
+    <string name="films_years">Years</string>
+    <string name="films_year">Year %1$d</string>
+    <string name="films_months">Months</string>
+    <string name="film_making">Making the film…</string>
+    <string name="film_making_sub">This takes a little while. Keep the screen on.</string>
+    <string name="film_failed">The film didn\'t come out</string>
+
+    <!-- Series -->
+    <string name="series_title">The same spot</string>
+    <string name="series_one">The same spot</string>
+    <string name="series_none">Open a photo and tap "Repeat this spot" to start one: by the door, on the sofa, with the bear.</string>
+    <string name="series_name_hint">By the window</string>
+    <string name="series_sub">Shoot it again with the last picture as a ghost over the camera. The film lines their faces up and lets them grow in place.</string>
+    <string name="series_again">Shoot it again</string>
+    <string name="series_film">Film</string>
+    <string name="series_need_two">The film needs two pictures at least.</string>
+    <string name="series_delete_title">Undo this series?</string>
+    <string name="series_delete_text">The pictures stay on the door frame; only the series goes.</string>
+
+    <!-- Hands -->
+    <string name="hands_title">Hands</string>
+    <string name="hands_none">Not traced yet</string>
+    <string name="hands_none_long">No hands traced yet. Do one now and another every half-year: they sit one inside the other, to scale.</string>
+    <string name="hands_sub">%1$s\'s hand on a sheet of paper, twice a year.</string>
+    <string name="hands_how_1">Lay a sheet of A4 on the table, the long side towards the child.</string>
+    <string name="hands_how_2">Spread their hand on it, wrist at the bottom edge.</string>
+    <string name="hands_how_3">Photograph it from straight above, the whole sheet in the picture.</string>
+    <string name="hands_take">Photograph the hand</string>
+    <string name="hands_trace_title">%1$s\'s hand</string>
+    <string name="hands_looking">Finding the sheet and the hand…</string>
+    <string name="hands_found">From wrist to fingertip, %1$s</string>
+    <string name="hands_not_found">Couldn\'t find the hand. Draw round it with your finger.</string>
+    <string name="hands_draw">Draw round the hand with your finger, in one go.</string>
+    <string name="hands_redraw">Draw it myself</string>
+    <string name="hands_grew">Grown %1$s</string>
+
+    <!-- Interview -->
+    <string name="interview_title">Birthday interview</string>
+    <string name="interview_none">Not yet</string>
+    <string name="interview_banner">Twelve questions on video, the same every year. This year: %1$s.</string>
+    <string name="interview_sub">The same questions on every birthday, answered on video. Ask them the week of the birthday, or whenever %1$s is in the mood.</string>
+    <string name="interview_watch">Watch the year (%1$d)</string>
+    <string name="interview_next">Next question</string>
+    <string name="interview_record">Record the answer</string>
+    <string name="interview_hint">The phone\'s camera opens for one clip. Ask the question out loud, film the answer, come back.</string>
+    <string name="interview_all_done">All twelve answered this year.</string>
+    <string name="interview_across">Every year</string>
+    <string name="interview_play_across">Play them one after another</string>
+    <string name="q_name">What\'s your name, and how old are you?</string>
+    <string name="q_grow_up">What will you be when you grow up?</string>
+    <string name="q_food">What\'s the best food in the world?</string>
+    <string name="q_friend">Who is your best friend?</string>
+    <string name="q_afraid">What are you afraid of?</string>
+    <string name="q_laugh">What makes you laugh?</string>
+    <string name="q_best_at">What are you best at?</string>
+    <string name="q_toy">What\'s your favourite toy?</string>
+    <string name="q_happy">What makes you happy?</string>
+    <string name="q_travel">Where would you go if you could go anywhere?</string>
+    <string name="q_parents">What are Mum and Dad like?</string>
+    <string name="q_wish">If you had one wish, what would it be?</string>
+
+    <!-- Words -->
+    <string name="words_title">Their words</string>
+    <string name="words_sub">The way they say things now, in their own voice. Speech changes faster than faces and is forgotten first.</string>
+    <string name="words_none">No words yet. Which one does %1$s say their own way?</string>
+    <string name="word_add">Add a word</string>
+    <string name="word_edit">The word</string>
+    <string name="word_said_hint">How they say it: "appo"</string>
+    <string name="word_said_phrase_hint">What they said, word for word</string>
+    <string name="word_means_hint">What it means: "apple"</string>
+    <string name="word_means">means "%1$s"</string>
+    <string name="word_phrase">A whole sentence</string>
+    <string name="word_record">Record</string>
+    <string name="word_hold">Hold to record their voice</string>
+    <string name="word_recorded">Their voice is recorded</string>
+    <string name="word_delete_title">Delete this word?</string>
+    <string name="word_delete_text">"%1$s" and its recording are deleted.</string>
+
+    <!-- Fading -->
+    <string name="fading_title">It will soon be gone</string>
+    <string name="fading_sub">Things of this age that leave without anyone noticing. Keep them while %1$s still does them.</string>
+    <string name="fading_now">Now</string>
+    <string name="fading_later">Coming up</string>
+    <string name="fading_kept">Kept · %1$d</string>
+    <string name="fading_passed">Gone by · %1$d</string>
+    <string name="fading_passed_sub">Tap to see them. An old picture from then can still be added.</string>
+    <string name="fading_passed_hint">Add a picture from then, from the gallery</string>
+    <string name="fading_left">usually lasts another %1$s</string>
+    <string name="fading_last_month">usually goes about now</string>
+    <string name="fading_from">from about %1$s</string>
+    <string name="fading_kept_at">kept at %1$s</string>
+    <string name="fade_grip">Holding your finger with the whole hand</string>
+    <string name="fade_feet">The tiny heels</string>
+    <string name="fade_yawn">The whole-face yawn</string>
+    <string name="fade_sleep_arms">Asleep in your arms</string>
+    <string name="fade_coo">The cooing</string>
+    <string name="fade_milk">Milk-drunk after a feed</string>
+    <string name="fade_laugh">Laughing till they hiccup</string>
+    <string name="fade_toes">Toes in the mouth</string>
+    <string name="fade_crawl">The crawl, their own way</string>
+    <string name="fade_babble">"Ba-ba-ba" and "da-da-da"</string>
+    <string name="fade_high_chair">In the high chair, covered in porridge</string>
+    <string name="fade_steps">The first wobbly steps</string>
+    <string name="fade_waddle">The nappy waddle</string>
+    <string name="fade_first_words">The first words</string>
+    <string name="fade_arms_up">Arms up: "carry me"</string>
+    <string name="fade_dummy">With the dummy</string>
+    <string name="fade_pram">In the pram</string>
+    <string name="fade_starfish">Starfish sleep</string>
+    <string name="fade_hide">Hiding where they can be seen</string>
+    <string name="fade_mixed_words">The mixed-up words</string>
+    <string name="fade_scribble">The first scribble</string>
+    <string name="fade_dance">Dancing like nobody\'s watching</string>
+    <string name="fade_bath">In the bath with bubbles</string>
+    <string name="fade_carry">You can still carry them</string>
+    <string name="fade_song">Their own song</string>
+    <string name="fade_why">The age of "why"</string>
+    <string name="fade_night_visit">Climbing into your bed at night</string>
+    <string name="fade_shoulders">On Dad\'s shoulders</string>
+    <string name="fade_story">The bedtime story</string>
+    <string name="fade_run_hug">Running to hug you at pick-up</string>
+    <string name="fade_hand_street">Holding your hand in the street</string>
+    <string name="fade_costume">In the favourite costume</string>
+    <string name="fade_magic">Believing in magic</string>
+    <string name="fade_training_wheels">The bike with training wheels</string>
+    <string name="fade_backwards_letters">Letters written backwards</string>
+    <string name="fade_gap_smile">The gap-toothed smile</string>
+    <string name="fade_syllables">Reading aloud, syllable by syllable</string>
+    <string name="fade_lap">Fitting on your lap</string>
+    <string name="fade_toy">With the favourite toy</string>
+    <string name="fade_room">Their room as it is now</string>
+    <string name="fade_grown_talk">Talking like a grown-up</string>
+    <string name="fade_hands">Their hand in yours</string>
+
+    <!-- Postcard -->
+    <string name="card_title">The month\'s postcard</string>
+    <string name="card_empty">No photos this month.</string>
+    <string name="card_making">Making the card…</string>
+    <string name="card_send">Send it to the family</string>
+    <string name="card_other">Other pictures</string>
+    <string name="card_footer">made with Notch</string>
+
+    <!-- Reminders -->
+    <string name="channel_nudges">Reminders</string>
+    <string name="channel_nudges_desc">A week going by without a picture, the day\'s second, birthdays and the month\'s postcard</string>
+    <string name="nudge_week_title">A week without a notch</string>
+    <string name="nudge_week">%1$s is %2$s. This version of them won\'t come again.</string>
+    <string name="nudge_week_f">%1$s is %2$s. This version of her won\'t come again.</string>
+    <string name="nudge_week_m">%1$s is %2$s. This version of him won\'t come again.</string>
+    <string name="nudge_week_many">No pictures this week yet of %1$s.</string>
+    <string name="nudge_second_title">Today\'s second</string>
+    <string name="nudge_second">A short clip of today, for the year\'s film.</string>
+    <string name="nudge_bday_title">%1$s is %2$d today!</string>
+    <string name="nudge_bday">Time for the birthday interview, a hand on paper and a mark on the door frame.</string>
+    <string name="nudge_half_title">%1$s is half a year older</string>
+    <string name="nudge_half">Time to trace the hand again, and to mark how tall.</string>
+    <string name="nudge_card_title">The postcard is ready</string>
+    <string name="nudge_card">%1$s on one card, for the family.</string>
+
+    <!-- Settings -->
+    <string name="set_reminders">Reminders</string>
+    <string name="set_nudges">When a week has no picture</string>
+    <string name="set_nudges_sub">Midweek and on its last day, at the hour you usually take pictures</string>
+    <string name="set_seconds">A second a day</string>
+    <string name="set_seconds_sub">A daily reminder for the year\'s film</string>
+    <string name="set_second_at">Remind at</string>
+    <string name="set_occasions">Birthdays and the month</string>
+    <string name="set_occasions_sub">The interview, the hand twice a year, the postcard on the 1st</string>
+    <string name="set_ghost">The ghost over the camera</string>
+    <string name="set_ghost_sub">An earlier picture laid faintly over your phone\'s camera, so the same spot can be shot again.</string>
+    <string name="set_ghost_overlay">Show over other apps</string>
+    <string name="set_ghost_off">Not allowed: tap to allow</string>
+    <string name="set_ghost_on">Allowed</string>
+    <string name="set_ghost_alpha">Strength: %1$d%%</string>
+    <string name="set_language">Language</string>
+    <string name="set_lang_system">System</string>
+    <string name="set_data">Your pictures</string>
+    <string name="backup_export">Back up</string>
+    <string name="backup_export_sub">Every picture, clip and word in one zip</string>
+    <string name="backup_import">Restore</string>
+    <string name="backup_import_sub">From a Notch zip</string>
+    <string name="backup_import_title">Replace everything here?</string>
+    <string name="backup_import_text">What is in Notch now is replaced by the backup.</string>
+    <string name="backup_import_go">Restore</string>
+    <string name="backup_done">Backed up.</string>
+    <string name="backup_failed">Couldn\'t write the backup.</string>
+    <string name="backup_restored">Restored.</string>
+    <string name="backup_bad">That isn\'t a Notch backup.</string>
+    <string name="set_about">About</string>
+    <string name="set_privacy">No account, no cloud, no ads. Pictures are copied into Notch on this phone and go nowhere unless you send them. Faces are lined up by the phone itself.</string>
+</resources>

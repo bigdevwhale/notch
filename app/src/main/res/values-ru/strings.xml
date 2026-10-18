@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notch</string>
+
+    <!-- Common -->
+    <string name="back">Назад</string>
+    <string name="cancel">Отмена</string>
+    <string name="save">Сохранить</string>
+    <string name="next">Дальше</string>
+    <string name="delete">Удалить</string>
+    <string name="close">Закрыть</string>
+    <string name="share">Поделиться</string>
+    <string name="play">Слушать</string>
+    <string name="favorite">Любимое</string>
+    <string name="settings">Настройки</string>
+    <string name="add_child">Добавить ребёнка</string>
+    <string name="and_sep">" и "</string>
+    <string name="no_camera">На телефоне не нашлось приложения камеры.</string>
+    <string name="save_gallery">В галерею</string>
+    <string name="saved_gallery">Сохранено в галерею, в папку Notch</string>
+    <string name="save_failed">Не получилось сохранить в галерею</string>
+    <string name="cm">%1$s см</string>
+    <string name="cm_unit">см</string>
+
+    <!-- Ages -->
+    <string name="age_born">первый день</string>
+    <string name="age_short_d">%1$d дн</string>
+    <string name="age_short_m">%1$d мес</string>
+    <string name="age_short_y">%1$d г</string>
+    <string name="age_short_ym">%1$d г %2$d мес</string>
+    <plurals name="years">
+        <item quantity="one">%d год</item>
+        <item quantity="few">%d года</item>
+        <item quantity="many">%d лет</item>
+        <item quantity="other">%d года</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d месяц</item>
+        <item quantity="few">%d месяца</item>
+        <item quantity="many">%d месяцев</item>
+        <item quantity="other">%d месяца</item>
+    </plurals>
+    <plurals name="months_left">
+        <item quantity="one">%d месяц</item>
+        <item quantity="few">%d месяца</item>
+        <item quantity="many">%d месяцев</item>
+        <item quantity="other">%d месяца</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d неделя</item>
+        <item quantity="few">%d недели</item>
+        <item quantity="many">%d недель</item>
+        <item quantity="other">%d недели</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d дней</item>
+        <item quantity="other">%d дня</item>
+    </plurals>
+    <plurals name="photos">
+        <item quantity="one">%d фото</item>
+        <item quantity="few">%d фото</item>
+        <item quantity="many">%d фото</item>
+        <item quantity="other">%d фото</item>
+    </plurals>
+    <plurals name="clips">
+        <item quantity="one">%d видео</item>
+        <item quantity="few">%d видео</item>
+        <item quantity="many">%d видео</item>
+        <item quantity="other">%d видео</item>
+    </plurals>
+    <plurals name="pictures">
+        <item quantity="one">%d снимок</item>
+        <item quantity="few">%d снимка</item>
+        <item quantity="many">%d снимков</item>
+        <item quantity="other">%d снимка</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">%d секунда</item>
+        <item quantity="few">%d секунды</item>
+        <item quantity="many">%d секунд</item>
+        <item quantity="other">%d секунды</item>
+    </plurals>
+    <plurals name="hands">
+        <item quantity="one">%d ладошка</item>
+        <item quantity="few">%d ладошки</item>
+        <item quantity="many">%d ладошек</item>
+        <item quantity="other">%d ладошки</item>
+    </plurals>
+    <plurals name="interviews">
+        <item quantity="one">ответы за %d год</item>
+        <item quantity="few">ответы за %d года</item>
+        <item quantity="many">ответы за %d лет</item>
+        <item quantity="other">ответы за %d года</item>
+    </plurals>
+
+    <!-- Tabs -->
+    <string name="tab_frame">Косяк</string>
+    <string name="tab_rings">Кольца</string>
+    <string name="tab_words">Словарик</string>
+    <string name="tab_fading">Уходит</string>
+    <string name="shoot">Сфотографировать</string>
+
+    <!-- Welcome -->
+    <string name="welcome_1_title">Они растут быстрее, чем копятся фотографии</string>
+    <string name="welcome_1_text">Проходит неделя, потом месяц, и вдруг оказывается, что нет ни одного снимка, какими они были тогда. Notch — это дверной косяк, на котором отмечают рост: по зарубке за каждую неделю жизни, в которую есть фото или видео.</string>
+    <string name="welcome_2_title">Хватит одного снимка в неделю</string>
+    <string name="welcome_2_text">Снимает обычная камера телефона, Notch забирает снятое. Если неделя проходит пустой, придёт мягкое напоминание — в тот час, когда вы обычно фотографируете. А ещё словарик смешных слов, «скоро уйдёт», секунда в день и один и тот же ракурс каждый год. Всё остаётся на этом телефоне.</string>
+    <string name="welcome_3_title">Для кого косяк?</string>
+    <string name="welcome_3_text">Братьев и сестёр можно добавить потом.</string>
+    <string name="welcome_mark">%1$d</string>
+    <string name="welcome_start">Повесить косяк</string>
+
+    <!-- Child -->
+    <string name="child_new">Новый ребёнок</string>
+    <string name="child_name">Имя</string>
+    <string name="child_name_hint">Маша</string>
+    <string name="child_born">День рождения</string>
+    <string name="child_born_pick">Выберите день</string>
+    <string name="child_gender_q">Девочка или мальчик?</string>
+    <string name="child_girl">Девочка</string>
+    <string name="child_boy">Мальчик</string>
+    <string name="child_none">Не указывать</string>
+    <string name="child_gender_why">Только чтобы правильно писать напоминания.</string>
+    <string name="child_crayon">Свой карандаш</string>
+    <string name="child_delete_title">Убрать с косяка: %1$s?</string>
+    <string name="child_delete_text">Снимки, слова и рост удалятся из Notch. Общие снимки с братьями и сёстрами останутся у них. Оригиналы в галерее не трогаем.</string>
+
+    <!-- Door frame -->
+    <string name="frame_week">%1$d-я неделя жизни</string>
+    <string name="frame_done">Зарубка за неделю есть</string>
+    <string name="frame_done_sub">Ещё один снимок лишним не будет.</string>
+    <string name="frame_streak">Уже %1$s подряд.</string>
+    <string name="frame_todo">%1$s: на этой неделе ещё нет снимка</string>
+    <string name="frame_todo_f">%1$s: на этой неделе ещё нет снимка</string>
+    <string name="frame_todo_m">%1$s: на этой неделе ещё нет снимка</string>
+    <string name="frame_left">До конца недели — %1$s.</string>
+    <string name="frame_last_day">Сегодня последний день этой недели.</string>
+    <string name="frame_shoot">Сделать зарубку</string>
+    <string name="frame_height">Рост</string>
+    <string name="frame_this_week_empty">Пока пусто. Фото или видео — и зарубка готова.</string>
+    <string name="frame_gap">%1$s без зарубок</string>
+    <string name="frame_before">%1$s до косяка</string>
+    <string name="frame_year">%1$s · %2$s</string>
+    <string name="frame_born">День рождения — %1$s</string>
+    <string name="height_title">Рост: %1$s</string>
+    <string name="height_mark">Отметить</string>
+
+    <!-- Shooting -->
+    <string name="shoot_title">Кто в кадре?</string>
+    <string name="shoot_second_title">Секунда сегодняшнего дня</string>
+    <string name="shoot_who">Нажмите, чтобы добавить братьев и сестёр.</string>
+    <string name="shoot_for">Для: %1$s</string>
+    <string name="shoot_open">Открыть камеру</string>
+    <string name="shoot_hint">Откроется камера телефона со всеми её режимами. Всё снятое попадёт на косяк, когда вы вернётесь; оригиналы останутся в галерее.</string>
+    <string name="shoot_second_open">Снять секунду</string>
+    <string name="shoot_second_hint">Снимите короткое видео: секунда из его середины войдёт в фильм года.</string>
+    <string name="shoot_second">Секунда</string>
+    <string name="shoot_photos">Фото</string>
+    <string name="shoot_gallery">Из галереи</string>
+    <string name="import_done">%1$s на косяке, каждый в своей неделе</string>
+    <string name="import_none">Эти снимки уже на косяке.</string>
+    <string name="carved_title">Зарубка!</string>
+    <string name="carved_for">%1$s — %2$s</string>
+    <string name="ghost_title">Тот же ракурс</string>
+    <string name="ghost_sub">Прошлый снимок полупрозрачно поверх камеры — чтобы поставить ребёнка туда же.</string>
+    <string name="ghost_year_ago">Год назад</string>
+    <string name="ghost_on_camera">Снимок ляжет поверх камеры. Совместите и снимайте.</string>
+    <string name="ghost_no_overlay">Чтобы положить снимок прямо поверх камеры, Notch нужно разрешение «Поверх других приложений». Без него — посмотрите внимательно сейчас.</string>
+    <string name="ghost_allow">Разрешить поверх приложений</string>
+
+    <!-- Moment -->
+    <string name="moment_note_hint">Что тут происходит?</string>
+    <string name="moment_who">Кто в кадре</string>
+    <string name="moment_second">Секунда дня</string>
+    <string name="moment_hand">Ладошка, %1$s</string>
+    <string name="moment_series_start">Повторять ракурс</string>
+    <string name="moment_series_open">Тот же ракурс</string>
+    <string name="moment_series_sub">Когда-нибудь снимите это место снова — этот кадр ляжет поверх камеры.</string>
+    <string name="moment_face">На аватар</string>
+    <string name="moment_delete_title">Удалить снимок?</string>
+    <string name="moment_delete_text">Он исчезнет с косяка. Оригинал в галерее не трогаем.</string>
+
+    <!-- Rings -->
+    <string name="rings_year">%1$d-й год: зарубок %2$d из %3$d недель</string>
+    <string name="stat_moments">снимков</string>
+    <string name="stat_weeks">недель с зарубкой</string>
+    <string name="stat_best">лучшая серия</string>
+    <string name="rings_height">Рост</string>
+    <string name="rings_on_this_day">В этот день</string>
+    <string name="rings_same_age">%1$s в %2$s</string>
+    <string name="rings_made">Что из этого сделано</string>
+
+    <!-- Films -->
+    <string name="films_title">Секунда в день</string>
+    <string name="films_count">%1$s</string>
+    <string name="films_sub">Короткое видео каждый день; в фильм идёт по секунде из каждого, с датой и возрастом в углу. Год — это шесть минут.</string>
+    <string name="films_remind">Напоминать каждый день</string>
+    <string name="films_remind_sub">В %1$s, если секунды ещё нет</string>
+    <string name="films_today">Снять секунду сегодня</string>
+    <string name="films_today_done">Снять ещё секунду</string>
+    <string name="films_none">Секунд пока нет.</string>
+    <string name="films_years">По годам</string>
+    <string name="films_year">%1$d-й год</string>
+    <string name="films_months">По месяцам</string>
+    <string name="film_making">Собираю фильм…</string>
+    <string name="film_making_sub">Это займёт немного времени. Не выключайте экран.</string>
+    <string name="film_failed">Фильм не получился</string>
+
+    <!-- Series -->
+    <string name="series_title">Тот же ракурс</string>
+    <string name="series_one">Ракурс</string>
+    <string name="series_none">Откройте фото и нажмите «Повторять ракурс»: у двери, на диване, с медведем.</string>
+    <string name="series_name_hint">У окна</string>
+    <string name="series_sub">Снимите снова — прошлый кадр ляжет поверх камеры. В фильме лица совмещаются, и ребёнок растёт на одном месте.</string>
+    <string name="series_again">Снять снова</string>
+    <string name="series_film">Фильм</string>
+    <string name="series_need_two">Для фильма нужно хотя бы два снимка.</string>
+    <string name="series_delete_title">Убрать ракурс?</string>
+    <string name="series_delete_text">Снимки останутся на косяке, исчезнет только подборка.</string>
+
+    <!-- Hands -->
+    <string name="hands_title">Ладошки</string>
+    <string name="hands_none">Ещё не обводили</string>
+    <string name="hands_none_long">Ладошек пока нет. Обведите сейчас и потом каждые полгода: они лягут одна в другую, в настоящем масштабе.</string>
+    <string name="hands_sub">%1$s: ладошка на листе бумаги, два раза в год.</string>
+    <string name="hands_how_1">Положите на стол лист А4 длинной стороной к ребёнку.</string>
+    <string name="hands_how_2">Ладошку — на лист, запястье у нижнего края.</string>
+    <string name="hands_how_3">Снимите строго сверху, чтобы весь лист был в кадре.</string>
+    <string name="hands_take">Сфотографировать ладошку</string>
+    <string name="hands_trace_title">Ладошка: %1$s</string>
+    <string name="hands_looking">Ищу лист и ладошку…</string>
+    <string name="hands_found">От запястья до кончика пальца — %1$s</string>
+    <string name="hands_not_found">Не нашёл ладошку. Обведите её пальцем.</string>
+    <string name="hands_draw">Обведите ладошку пальцем, одной линией.</string>
+    <string name="hands_redraw">Обвести самому</string>
+    <string name="hands_grew">Выросла на %1$s</string>
+
+    <!-- Interview -->
+    <string name="interview_title">Интервью на день рождения</string>
+    <string name="interview_none">Ещё не было</string>
+    <string name="interview_banner">Двенадцать вопросов на видео, каждый год одни и те же. В этом году: %1$s.</string>
+    <string name="interview_sub">Одни и те же вопросы каждый день рождения, ответы на видео. Спросите в неделю дня рождения или когда будет настроение (%1$s).</string>
+    <string name="interview_watch">Смотреть год (%1$d)</string>
+    <string name="interview_next">Следующий вопрос</string>
+    <string name="interview_record">Записать ответ</string>
+    <string name="interview_hint">Откроется камера телефона для одного видео. Задайте вопрос вслух, снимите ответ и вернитесь.</string>
+    <string name="interview_all_done">В этом году ответы на все двенадцать.</string>
+    <string name="interview_across">По годам</string>
+    <string name="interview_play_across">Смотреть все подряд</string>
+    <string name="q_name">Как тебя зовут и сколько тебе лет?</string>
+    <string name="q_grow_up">Кем ты будешь, когда вырастешь?</string>
+    <string name="q_food">Какая еда самая вкусная на свете?</string>
+    <string name="q_friend">Кто твой лучший друг?</string>
+    <string name="q_afraid">Чего ты боишься?</string>
+    <string name="q_laugh">Что тебя смешит?</string>
+    <string name="q_best_at">Что у тебя получается лучше всех?</string>
+    <string name="q_toy">Какая у тебя любимая игрушка?</string>
+    <string name="q_happy">Что тебя радует?</string>
+    <string name="q_travel">Куда бы ты поехал(-а), если бы можно было куда угодно?</string>
+    <string name="q_parents">Какие у тебя мама и папа?</string>
+    <string name="q_wish">Если бы можно было загадать одно желание, что бы ты загадал(-а)?</string>
+
+    <!-- Words -->
+    <string name="words_title">Словарик</string>
+    <string name="words_sub">Как они говорят сейчас — их собственным голосом. Речь меняется быстрее лица и забывается первой.</string>
+    <string name="words_none">Слов пока нет. Какое слово %1$s говорит по-своему?</string>
+    <string name="word_add">Добавить слово</string>
+    <string name="word_edit">Слово</string>
+    <string name="word_said_hint">Как говорит: «ябуко»</string>
+    <string name="word_said_phrase_hint">Что сказал(-а), слово в слово</string>
+    <string name="word_means_hint">Что значит: «яблоко»</string>
+    <string name="word_means">это «%1$s»</string>
+    <string name="word_phrase">Целая фраза</string>
+    <string name="word_record">Записать</string>
+    <string name="word_hold">Удерживайте, чтобы записать голос</string>
+    <string name="word_recorded">Голос записан</string>
+    <string name="word_delete_title">Удалить слово?</string>
+    <string name="word_delete_text">«%1$s» и запись голоса удалятся.</string>
+
+    <!-- Fading -->
+    <string name="fading_title">Скоро уйдёт</string>
+    <string name="fading_sub">То, что в этом возрасте уходит незаметно. Сохраните, пока это ещё есть (%1$s).</string>
+    <string name="fading_now">Сейчас</string>
+    <string name="fading_later">Скоро начнётся</string>
+    <string name="fading_kept">Сохранено · %1$d</string>
+    <string name="fading_passed">Прошло · %1$d</string>
+    <string name="fading_passed_sub">Нажмите, чтобы посмотреть. Старый снимок из того времени ещё можно добавить.</string>
+    <string name="fading_passed_hint">Добавить снимок того времени из галереи</string>
+    <string name="fading_left">обычно длится ещё %1$s</string>
+    <string name="fading_last_month">обычно уходит примерно сейчас</string>
+    <string name="fading_from">примерно с %1$s</string>
+    <string name="fading_kept_at">сохранено в %1$s</string>
+    <string name="fade_grip">Держит палец всей ладошкой</string>
+    <string name="fade_feet">Крошечные пяточки</string>
+    <string name="fade_yawn">Зевает всем лицом</string>
+    <string name="fade_sleep_arms">Спит у вас на руках</string>
+    <string name="fade_coo">Гулит</string>
+    <string name="fade_milk">Сытый сон после кормления</string>
+    <string name="fade_laugh">Смеётся до икоты</string>
+    <string name="fade_toes">Ножка во рту</string>
+    <string name="fade_crawl">Ползает — по-своему</string>
+    <string name="fade_babble">«Ба-ба-ба» и «да-да-да»</string>
+    <string name="fade_high_chair">В стульчике, вся щёчка в каше</string>
+    <string name="fade_steps">Первые шаги вразвалочку</string>
+    <string name="fade_waddle">Походка в подгузнике</string>
+    <string name="fade_first_words">Первые слова</string>
+    <string name="fade_arms_up">Руки вверх: «на ручки»</string>
+    <string name="fade_dummy">С соской</string>
+    <string name="fade_pram">В коляске</string>
+    <string name="fade_starfish">Спит звёздочкой</string>
+    <string name="fade_hide">Прячется так, что всё видно</string>
+    <string name="fade_mixed_words">Путает слова</string>
+    <string name="fade_scribble">Первая каляка-маляка</string>
+    <string name="fade_dance">Танцует, будто никто не смотрит</string>
+    <string name="fade_bath">В ванне с пеной</string>
+    <string name="fade_carry">Вы ещё носите на руках</string>
+    <string name="fade_song">Своя песенка</string>
+    <string name="fade_why">Возраст «почему»</string>
+    <string name="fade_night_visit">Прибегает к вам ночью</string>
+    <string name="fade_shoulders">На плечах у папы</string>
+    <string name="fade_story">Сказка на ночь</string>
+    <string name="fade_run_hug">Бежит обниматься, когда вы забираете</string>
+    <string name="fade_hand_street">Держит за руку на улице</string>
+    <string name="fade_costume">В любимом костюме</string>
+    <string name="fade_magic">Верит в чудеса</string>
+    <string name="fade_training_wheels">Велосипед с боковыми колёсиками</string>
+    <string name="fade_backwards_letters">Буквы задом наперёд</string>
+    <string name="fade_gap_smile">Улыбка со щербинкой</string>
+    <string name="fade_syllables">Читает вслух по слогам</string>
+    <string name="fade_lap">Помещается у вас на коленях</string>
+    <string name="fade_toy">С любимой игрушкой</string>
+    <string name="fade_room">Комната — такая, как сейчас</string>
+    <string name="fade_grown_talk">Рассуждает как взрослый</string>
+    <string name="fade_hands">Ладошка в вашей ладони</string>
+
+    <!-- Postcard -->
+    <string name="card_title">Открытка месяца</string>
+    <string name="card_empty">В этом месяце нет фотографий.</string>
+    <string name="card_making">Собираю открытку…</string>
+    <string name="card_send">Отправить родным</string>
+    <string name="card_other">Другие снимки</string>
+    <string name="card_footer">сделано в Notch</string>
+
+    <!-- Reminders -->
+    <string name="channel_nudges">Напоминания</string>
+    <string name="channel_nudges_desc">Неделя без снимков, секунда дня, дни рождения и открытка месяца</string>
+    <string name="nudge_week_title">Неделя без зарубки</string>
+    <string name="nudge_week">%1$s — %2$s. Такими они больше не будут.</string>
+    <string name="nudge_week_f">%1$s — %2$s. Этой версии её больше не будет.</string>
+    <string name="nudge_week_m">%1$s — %2$s. Этой версии его больше не будет.</string>
+    <string name="nudge_week_many">На этой неделе ещё нет снимков: %1$s.</string>
+    <string name="nudge_second_title">Секунда дня</string>
+    <string name="nudge_second">Короткое видео сегодняшнего дня — для фильма года.</string>
+    <string name="nudge_bday_title">%1$s сегодня %2$d!</string>
+    <string name="nudge_bday">Время для интервью, ладошки на бумаге и отметки роста на косяке.</string>
+    <string name="nudge_half_title">%1$s: ещё полгода</string>
+    <string name="nudge_half">Пора снова обвести ладошку и отметить рост.</string>
+    <string name="nudge_card_title">Открытка готова</string>
+    <string name="nudge_card">%1$s на одной открытке — для родных.</string>
+
+    <!-- Settings -->
+    <string name="set_reminders">Напоминания</string>
+    <string name="set_nudges">Когда за неделю нет снимков</string>
+    <string name="set_nudges_sub">В середине недели и в её последний день — в час, когда вы обычно фотографируете</string>
+    <string name="set_seconds">Секунда в день</string>
+    <string name="set_seconds_sub">Ежедневное напоминание для фильма года</string>
+    <string name="set_second_at">Напоминать в</string>
+    <string name="set_occasions">Дни рождения и месяц</string>
+    <string name="set_occasions_sub">Интервью, ладошка раз в полгода, открытка первого числа</string>
+    <string name="set_ghost">Призрак поверх камеры</string>
+    <string name="set_ghost_sub">Прошлый снимок полупрозрачно поверх камеры телефона — чтобы снять тот же ракурс снова.</string>
+    <string name="set_ghost_overlay">Поверх других приложений</string>
+    <string name="set_ghost_off">Не разрешено: нажмите, чтобы разрешить</string>
+    <string name="set_ghost_on">Разрешено</string>
+    <string name="set_ghost_alpha">Насыщенность: %1$d%%</string>
+    <string name="set_language">Язык</string>
+    <string name="set_lang_system">Системный</string>
+    <string name="set_data">Ваши снимки</string>
+    <string name="backup_export">Резервная копия</string>
+    <string name="backup_export_sub">Все снимки, видео и слова в одном zip</string>
+    <string name="backup_import">Восстановить</string>
+    <string name="backup_import_sub">Из zip-файла Notch</string>
+    <string name="backup_import_title">Заменить всё, что здесь есть?</string>
+    <string name="backup_import_text">Всё, что сейчас в Notch, заменится копией.</string>
+    <string name="backup_import_go">Восстановить</string>
+    <string name="backup_done">Копия сохранена.</string>
+    <string name="backup_failed">Не получилось записать копию.</string>
+    <string name="backup_restored">Восстановлено.</string>
+    <string name="backup_bad">Это не резервная копия Notch.</string>
+    <string name="set_about">О приложении</string>
+    <string name="set_privacy">Без аккаунта, облака и рекламы. Снимки копируются в Notch на этом телефоне и никуда не уходят, пока вы сами их не отправите. Лица совмещает сам телефон.</string>
+</resources>
