@@ -1,5 +1,11 @@
 # Changelog
 
+<!--
+Telegram: end each version's section with a hidden block for the StillCraft chat. Start it with a
+line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is fixed), no markdown,
+then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
+-->
+
 ## [1.1.0]
 
 - Past weeks take pictures from the gallery: every week on the door frame has a gallery button, and folded runs of empty weeks open with a tap. What is picked goes into that week even when its own date is lost or elsewhere.
